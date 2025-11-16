@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Submission - Essay Paper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Essay Paper</h1>
+            <div class="timer-container">
+                <div class="timer-label">Time Remaining:</div>
+                <div class="timer" id="timer">00:00:00</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="assignment-info">
+                <h2>Assignment Details</h2>
+                <div class="info-item">
+                    <span class="label">Assignment:</span>
+                    <span class="value">Essay Paper</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Due Date:</span>
+                    <span class="value" id="dueDate">--</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Status:</span>
+                    <span class="value" id="status">Not Submitted</span>
+                </div>
+            </div>
+
+            <div class="submission-section">
+                <h2>Submit Your Work</h2>
+                <div class="file-upload-area" id="fileUploadArea">
+                    <div class="upload-icon">📄</div>
+                    <p class="upload-text">Click to select a file or drag and drop</p>
+                    <p class="upload-hint">Accepted formats: PDF, DOC, DOCX, TXT</p>
+                    <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+                </div>
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <span class="file-name" id="fileName"></span>
+                    <button class="remove-file" id="removeFile">×</button>
+                </div>
+                <button class="submit-btn" id="submitBtn" disabled>Submit Assignment</button>
+            </div>
+        </main>
+    </div>
+
+    <button class="settings-btn" id="settingsBtn" title="Settings">⚙️</button>
+
+    <!-- Success Animation Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-checkmark">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle class="checkmark-circle" cx="50" cy="50" r="45"/>
+                    <path class="checkmark-check" d="M30 50 L45 65 L70 35"/>
+                </svg>
+            </div>
+            <h2 class="success-title">Assignment Submitted!</h2>
+            <p class="success-message">Your work has been successfully submitted.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

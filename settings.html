@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Timer Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container settings-container">
+        <header>
+            <h1>Timer Settings</h1>
+            <a href="index.html" class="back-link">← Back to Assignment</a>
+        </header>
+
+        <main>
+            <div class="settings-section">
+                <h2>Set Countdown Timer</h2>
+                <p class="settings-description">Set the countdown timer duration. This is independent of the due date.</p>
+                
+                <div class="time-input-group">
+                    <label for="hoursInput">Hours:</label>
+                    <input type="number" id="hoursInput" min="0" max="999" value="0" required>
+                </div>
+
+                <div class="time-input-group">
+                    <label for="minutesInput">Minutes:</label>
+                    <input type="number" id="minutesInput" min="0" max="59" value="0" required>
+                </div>
+
+                <div class="time-input-group">
+                    <label for="secondsInput">Seconds:</label>
+                    <input type="number" id="secondsInput" min="0" max="59" value="0" required>
+                </div>
+
+                <div class="preview-section">
+                    <h3>Preview</h3>
+                    <p class="preview-text">Countdown Duration: <span id="previewTimer">00:00:00</span></p>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>Set Due Date</h2>
+                <p class="settings-description">Set the assignment due date and time. This will be displayed on the assignment page.</p>
+                
+                <div class="time-input-group">
+                    <label for="dueDateInput">Due Date & Time:</label>
+                    <input type="datetime-local" id="dueDateInput">
+                </div>
+
+                <div class="preview-section">
+                    <h3>Preview</h3>
+                    <p class="preview-text">Due Date: <span id="previewDueDate">Not Set</span></p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="save-btn" id="saveBtn">Save Settings</button>
+                <button class="cancel-btn" id="cancelBtn">Cancel</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
+
